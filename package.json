@@ -1,0 +1,24 @@
+{
+  "name": "gavyncaldwell-styles",
+  "version": "1.0.0",
+  "description": "styles for gavyncaldwell.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GavMan1995/gavyncaldwell-styles.git"
+  },
+  "author": "gavyn caldwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GavMan1995/gavyncaldwell-styles/issues"
+  },
+  "homepage": "https://github.com/GavMan1995/gavyncaldwell-styles#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

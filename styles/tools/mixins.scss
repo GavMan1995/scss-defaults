@@ -1,0 +1,50 @@
+//flex mixins
+@mixin flex-container(
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $align-content: flex-start,
+  $wrap: wrap,
+  $direction: row
+  ) {
+
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: $align-content;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  @if $direction == 'column' {
+    flex-wrap: nowrap;
+
+    > * {
+      width: 100%;
+    }
+  } @else {
+    flex-wrap: #{$wrap};
+  }
+}
+
+@mixin flex-item(
+  $basis: '100px',
+  $grow: '1',
+  $shrink: '1'
+  ) {
+
+  //Basis should always be px, not %, vw, vh, or em
+  flex-basis: $basis;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+}
+
+//Media Query Mixin
+@mixin media-query($size) {
+  @if $size == 'sm' {
+    @media (max-width: 480px) {@content;}
+  }@else if $size == 'md' {
+    @media (max-width: 800px) {@content;}
+  }@else if $size == 'ldg' {
+    @media (max-width: 1200px) {@content;}
+  }@else {
+    @media (max-width: $size) {@content;}
+  }
+}
