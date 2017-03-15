@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 			'Your Project Name': {
 				options: {
 					project: 'app/',
-					domain: 'consign-design-styles.surge.sh'
+					domain: 'gavman-styles.surge.sh'
 				}
 			}
 		},
