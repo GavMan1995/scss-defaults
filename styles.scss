@@ -1,17 +1,5 @@
-//=== Defaults ===\\
-@import 'styles/defaults/resets';
-@import 'styles/defaults/typography';
-
-//=== Tools ===\\
-@import 'styles/tools/mixins';
-@import 'styles/tools/responsive';
-@import 'styles/tools/variables';
-
-//=== Components ===\\
-@import 'styles/components/buttons';
-@import 'styles/components/forms';
-@import 'styles/components/header';
-@import 'styles/components/tables';
+//=== Global ===\\
+@import 'styles/global/styles';
 
 //=== Pages ===\\
-@import 'styles/pages/home';
+// @import 'styles/pages/styles';
