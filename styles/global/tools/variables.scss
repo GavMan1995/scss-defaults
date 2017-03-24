@@ -51,3 +51,7 @@ $cl-hyperlink: #005cff;
 
 $cl-fit-blue: #4389a2;
 $cl-fit-purple: #5c258d;
+
+//darken
+//scss-lint:disable all
+$cl-gold: darken(#d5bba4, 10%);
