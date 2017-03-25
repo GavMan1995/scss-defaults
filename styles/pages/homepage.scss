@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($cl-neutral-6, 0.8);
+  background-color: rgba($cl-white, 0.8);
   z-index: 100;
 }
 
@@ -33,7 +33,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  color: $cl-white;
+  color: $cl-neutral-6;
   text-align: center;
   z-index: 200;
 
@@ -42,6 +42,7 @@
     height: auto;
     margin-bottom: 24px;
     border-radius: 50%;
+    box-shadow: 0 0 24px 2px $cl-black;
   }
 
   > h1 {
@@ -67,11 +68,11 @@
 
 .c-section.c-section--bg-design {
   position: relative;
-  background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490392406/web-design-2038872_1920_y2os1a.jpg');
+  background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/imac-606765_1920_xdbtrx.jpg');
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  color: $cl-white;
+  color: $cl-neutral-6;
 }
 
 .c-section__header {
@@ -195,7 +196,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: lighten($cl-gold, 10%);
+      background-color: darken($cl-gold, 10%);
     }
   }
 }
@@ -209,6 +210,21 @@
 
   @include media-query(sm) {
     display: none;
+  }
+}
+
+.c-email-img-container {
+  @include flex-item(100%);
+  @include flex-container(center, center, center);
+
+  > h2 {
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  > img {
+    width: 200px;
   }
 }
 
@@ -255,7 +271,7 @@
 
   > button {
     padding: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
     border: 4px solid $cl-gold;
     border-radius: 0 0 4px 4px;
     outline: 0;
@@ -265,7 +281,8 @@
     cursor: pointer;
 
     &:hover {
-      background-color: lighten($cl-gold, 10%);
+      border-color: darken($cl-gold, 10%);
+      background-color: darken($cl-gold, 10%);
     }
   }
 }
