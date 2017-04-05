@@ -1,19 +1,34 @@
-.c-render-target {
-  height: 100%;
-}
-
-.c-home-page {
-  height: 100%;
-}
-
 .c-hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 56px);
   background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490393050/blur-1853305_1920_wrgk0g.jpg');
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+
+  @include media-query(md) {
+    height: 400px;
+  }
+
+  @include media-query(sm) {
+    height: 320px;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 16px;
+    left: calc(50% - 50px);
+    color: $cl-neutral-4;
+    content: 'Scroll Down V';
+    z-index: 300;
+    animation: bounce 10s 2s infinite;
+
+    @include media-query(md) {
+      display: none;
+    }
+  }
+
 }
 
 .c-overlay {
@@ -33,77 +48,20 @@
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 8px;
   color: $cl-neutral-6;
   text-align: center;
   z-index: 200;
 
   > img {
-    width: 300px;
+    width: 60%;
     height: auto;
-    margin-bottom: 24px;
-    border-radius: 50%;
-    box-shadow: 0 0 24px 2px $cl-black;
   }
 
-  > h1 {
-    width: 100%;
-    padding-bottom: 8px;
+  > h3 {
+    max-width: 800px;
+    padding-top: 32px;
   }
-}
-
-.c-section {
-  @include flex-container($align-items: center);
-  padding: 80px 5%;
-  background-color: $cl-neutral-6;
-  color: $cl-white;
-
-  a {
-    color: $cl-gold;
-  }
-
-  @include media-query(md) {
-    padding: 24px;
-  }
-}
-
-.c-section.c-section--bg-design {
-  position: relative;
-  background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/imac-606765_1920_xdbtrx.jpg');
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  color: $cl-neutral-6;
-}
-
-.c-section__header {
-  width: 100%;
-  padding-bottom: 24px;
-}
-
-.c-section__main-content {
-  @include flex-item(400px, 2);
-  height: 100%;
-  padding: 8px;
-  z-index: 200;
-}
-
-.c-section__aside-content {
-  @include flex-item(400px, 1);
-  height: 100%;
-  padding: 8px;
-  z-index: 200;
-}
-
-.c-section__aside-content.c-section__aside-content--right-align {
-  @include flex-container(flex-end);
-
-  @include media-query(md) {
-    justify-content: center;
-  }
-}
-
-.c-section__aside-content.c-section__aside-content--center {
-  @include flex-container($align-items: center);
 }
 
 .c-phone-view {
@@ -112,7 +70,7 @@
   padding: 64px 16px;
   //iphone gold color
   //scss-lint:disable ColorVariable
-  border: 4px solid $cl-gold;
+  border: 4px solid $cl-green;
   border-radius: 24px;
   background-color: $cl-white;
 
@@ -141,7 +99,7 @@
     left: 148px;
     width: 56px;
     height: 56px;
-    border: 2px solid $cl-gold;
+    border: 2px solid $cl-green;
     border-radius: 50%;
     background-color: $cl-neutral-2;
     content: '';
@@ -177,7 +135,7 @@
   > input {
     @include flex-item(400px, 0);
     padding: 16px 8px 8px;
-    border: 4px solid $cl-gold;
+    border: 4px solid $cl-green;
     border-right: 0;
     border-radius: 4px 0 0 4px;
     outline: 0;
@@ -190,26 +148,14 @@
     border: 0;
     border-radius: 0 4px 4px 0;
     outline: 0;
-    background-color: $cl-gold;
+    background-color: $cl-green;
     color: $cl-white;
     font-size: 18px;
     cursor: pointer;
 
     &:hover {
-      background-color: darken($cl-gold, 10%);
+      background-color: darken($cl-green, 5%);
     }
-  }
-}
-
-.c-img-container {
-  @include flex-item(100%);
-
-  > img {
-    width: 100%;
-  }
-
-  @include media-query(sm) {
-    display: none;
   }
 }
 
@@ -219,8 +165,8 @@
 
   > h2 {
     width: 100%;
-    text-align: center;
     padding-top: 8px;
+    text-align: center;
   }
 
   > img {
@@ -244,6 +190,10 @@
   @include flex-container(center, center);
   padding: 16px;
 
+  @include media-query(sm) {
+    padding: 0;
+  }
+
   > input,
   textarea,
   button {
@@ -252,7 +202,7 @@
 
   > input {
     padding: 16px;
-    border: 4px solid $cl-gold;
+    border: 4px solid $cl-green;
     border-radius: 4px 4px 0 0;
     outline: 0;
     font-size: 18px;
@@ -262,9 +212,9 @@
     height: 200px;
     padding: 8px;
     border-top: 0;
-    border-right: 4px solid $cl-gold;
+    border-right: 4px solid $cl-green;
     border-bottom: 0;
-    border-left: 4px solid $cl-gold;
+    border-left: 4px solid $cl-green;
     outline: 0;
     font-size: 18px;
   }
@@ -272,17 +222,17 @@
   > button {
     padding: 16px;
     transition: background-color 0.3s, border-color 0.3s;
-    border: 4px solid $cl-gold;
+    border: 4px solid $cl-green;
     border-radius: 0 0 4px 4px;
     outline: 0;
-    background-color: $cl-gold;
+    background-color: $cl-green;
     color: $cl-white;
     font-size: 18px;
     cursor: pointer;
 
     &:hover {
-      border-color: darken($cl-gold, 10%);
-      background-color: darken($cl-gold, 10%);
+      border-color: darken($cl-green, 5%);
+      background-color: darken($cl-green, 5%);
     }
   }
 }

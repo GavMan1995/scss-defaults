@@ -1,0 +1,22 @@
+@keyframes bounce {
+  0%, 10%, 20% {
+    bottom: 16px;
+  }
+  5%, 15%{
+    bottom: 8px;
+  }
+}
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+   }
+}

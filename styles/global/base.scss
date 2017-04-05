@@ -1,0 +1,103 @@
+.c-render-target {
+  height: 100%;
+  padding-top: 56px;
+}
+
+.c-page {
+  height: 100%;
+}
+
+.c-page.c-page--construction {
+  @include flex-container(center, center, center);
+
+  > h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  > img {
+    width: 200px;
+  }
+}
+
+.c-section {
+  @include flex-container($align-items: center);
+  padding: 80px 5%;
+  background-color: $cl-neutral-5;
+  color: $cl-white;
+
+  @include media-query(md) {
+    padding: 8px;
+  }
+}
+
+.c-section.c-section--white {
+  background-color: $cl-white;
+  color: $cl-neutral-6;
+}
+
+.c-section.c-section--center {
+  justify-content: center;
+  text-align: center;
+}
+
+.c-section.c-section--gradient {
+  //for the crazy background
+  //scss-lint:disable all
+  background: linear-gradient(
+    to bottom right,
+    $cl-neutral-6, #fd746c,
+    $cl-green, #00c9ff,
+    $cl-purple, #e73827);
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  animation: gradient-bg 300s ease infinite;
+}
+
+.c-section.c-section--homepage-bg {
+  position: relative;
+  background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/imac-606765_1920_xdbtrx.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  color: $cl-neutral-6;
+}
+
+.c-section__header {
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.c-section__main-content {
+  @include flex-container();
+  @include flex-item(400px, 1);
+  height: 100%;
+  padding: 8px;
+  z-index: 200;
+}
+
+.c-section__aside-content {
+  @include flex-container();
+  @include flex-item(200px, 1);
+  height: 100%;
+  padding: 8px;
+  z-index: 200;
+}
+
+.c-section__aside-content.c-section__aside-content--right-align {
+  justify-content: flex-end;
+
+  @include media-query(md) {
+    justify-content: center;
+  }
+}
+
+.c-section__aside-content.c-section__aside-content--vertical-center {
+  align-items: center;
+}
+
+.c-section__aside-content.c-section__aside-content--center {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}

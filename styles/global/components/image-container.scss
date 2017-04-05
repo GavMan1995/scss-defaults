@@ -1,0 +1,22 @@
+.c-img-container {
+  @include flex-item(100%);
+
+  > img {
+    width: 100%;
+  }
+}
+
+.c-img-container.c-img-container--hide-on-mobile {
+  @include media-query(sm) {
+    display: none;
+  }
+}
+
+.c-img-container.c-img-container--about-me {
+  @include flex-item(200px, 0);
+  margin-bottom: 16px;
+
+  > img {
+    border-radius: 50%;
+  }
+}

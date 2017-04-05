@@ -1,0 +1,19 @@
+.c-about-me-title {
+  width: 100%;
+}
+
+.c-about-me-links {
+  flex-basis: 100%;
+  @include flex-container(center, center);
+
+  > a {
+    padding: 8px;
+    color: $cl-white;
+    transition: color 0.3s;
+    font-size: 40px;
+
+    &:hover {
+      color: $cl-neutral-3;
+    }
+  }
+}

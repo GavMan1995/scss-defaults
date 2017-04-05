@@ -1,0 +1,6 @@
+.c-card {
+  @include flex-item(200px, 1);
+  margin: 8px;
+  background-color: $cl-neutral-3;
+  box-shadow: 0 0 32px $cl-neutral-6;
+}

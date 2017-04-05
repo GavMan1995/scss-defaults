@@ -1,8 +1,22 @@
 .c-header {
+  @include flex-container($align-items: center);
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 48px;
-  background-color: $cl-gold;
+  height: 56px;
+  background-color: $cl-neutral-6;
   box-shadow: 0 0 8px $cl-black;
-  z-index: 300;
+  z-index: 1000;
+}
+
+.c-header__logo {
+  width: 226px;
+  height: 40px;
+  margin: 8px;
+
+  > img {
+    width: 100%;
+    height: auto;
+  }
 }
