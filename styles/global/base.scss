@@ -1,9 +1,9 @@
-.c-render-target {
+.o-render-target {
   height: 100%;
   padding-top: 56px;
 }
 
-.c-page {
+.o-page {
   height: 100%;
 }
 
@@ -20,7 +20,7 @@
   }
 }
 
-.c-section {
+.o-section {
   @include flex-container($align-items: center);
   padding: 80px 5%;
   background-color: $cl-neutral-5;
@@ -31,17 +31,17 @@
   }
 }
 
-.c-section.c-section--white {
+.o-section.o-section--white {
   background-color: $cl-white;
   color: $cl-neutral-6;
 }
 
-.c-section.c-section--center {
+.o-section.o-section--center {
   justify-content: center;
   text-align: center;
 }
 
-.c-section.c-section--gradient {
+.o-section.o-section--gradient {
   //for the crazy background
   //scss-lint:disable all
   background: linear-gradient(
@@ -54,7 +54,7 @@
   animation: gradient-bg 300s ease infinite;
 }
 
-.c-section.c-section--homepage-bg {
+.o-section.o-section--homepage-bg {
   position: relative;
   background: url('https://res.cloudinary.com/gavmanweb/image/upload/v1490279436/imac-606765_1920_xdbtrx.jpg');
   background-attachment: fixed;
@@ -63,12 +63,12 @@
   color: $cl-neutral-6;
 }
 
-.c-section__header {
+.o-section__header {
   width: 100%;
   padding-bottom: 24px;
 }
 
-.c-section__main-content {
+.o-section__main-content {
   @include flex-container();
   @include flex-item(400px, 1);
   height: 100%;
@@ -76,7 +76,7 @@
   z-index: 200;
 }
 
-.c-section__aside-content {
+.o-section__aside-content {
   @include flex-container();
   @include flex-item(200px, 1);
   height: 100%;
@@ -84,7 +84,7 @@
   z-index: 200;
 }
 
-.c-section__aside-content.c-section__aside-content--right-align {
+.o-section__aside-content.o-section__aside-content--right-align {
   justify-content: flex-end;
 
   @include media-query(md) {
@@ -92,11 +92,11 @@
   }
 }
 
-.c-section__aside-content.c-section__aside-content--vertical-center {
+.o-section__aside-content.o-section__aside-content--vertical-center {
   align-items: center;
 }
 
-.c-section__aside-content.c-section__aside-content--center {
+.o-section__aside-content.o-section__aside-content--center {
   align-content: center;
   align-items: center;
   justify-content: center;

@@ -14,21 +14,19 @@
   @include media-query(sm) {
     height: 320px;
   }
+}
 
-  &::before {
-    position: absolute;
-    bottom: 16px;
-    left: calc(50% - 50px);
-    color: $cl-neutral-4;
-    content: 'Scroll Down V';
-    z-index: 300;
-    animation: bounce 10s 2s infinite;
+.c-scrolldown {
+  position: absolute;
+  bottom: 16px;
+  left: calc(50% - 48px);
+  color: $cl-neutral-4;
+  z-index: 300;
+  animation: bounce 10s 2s infinite;
 
-    @include media-query(md) {
-      display: none;
-    }
+  @include media-query(md) {
+    display: none;
   }
-
 }
 
 .c-overlay {
